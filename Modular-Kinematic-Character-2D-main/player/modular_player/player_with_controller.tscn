@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://uvmta6gvsp7m"]
+
+[ext_resource type="Script" uid="uid://12y4nns5pnqe" path="res://player/modular_player/player_with_controller.gd" id="1_8qerm"]
+[ext_resource type="Texture2D" uid="uid://dfb8rr2fakwgp" path="res://player/player.png" id="2_j2tss"]
+[ext_resource type="Script" uid="uid://dh2kdimygr8on" path="res://modular_character_controller/core_scripts/action_manager.gd" id="3_f5rv5"]
+[ext_resource type="Script" uid="uid://cvulit1lfi6jh" path="res://player/modular_player/action_move.gd" id="4_y2a2n"]
+[ext_resource type="Script" uid="uid://clmlnuwjgkw3g" path="res://player/modular_player/action_jump.gd" id="5_yqdey"]
+[ext_resource type="Script" uid="uid://vbg0h5317lfw" path="res://player/modular_player/player_controller.gd" id="6_f5rv5"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(14, 14)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8qerm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j2tss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.315559, 0.157784)
+shape = SubResource("1")
+
+[node name="ActionManager" type="Node" parent="." node_paths=PackedStringArray("_character")]
+script = ExtResource("3_f5rv5")
+_character = NodePath("..")
+metadata/_custom_type_script = "uid://dh2kdimygr8on"
+
+[node name="move" type="Node" parent="ActionManager"]
+script = ExtResource("4_y2a2n")
+
+[node name="jump" type="Node" parent="ActionManager"]
+script = ExtResource("5_yqdey")
+
+[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("controlled_obj")]
+script = ExtResource("6_f5rv5")
+controlled_obj = NodePath("..")
