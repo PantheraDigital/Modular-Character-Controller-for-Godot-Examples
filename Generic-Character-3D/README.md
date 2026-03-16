@@ -24,7 +24,7 @@ Third person character specific controls:
 - double tap space: _toggle flying_ 
 - q/e (while flying): _fly up/fly down_
 
-In the level there are two characters. One is the Simple Character (first person) and the other the Example Character (third person) . The Simple Character  is the equivalent of using Godot's CharacterBody3D's Basic Movement template script. The Example Character uses a more complex set up to display a more common set of actions a character may have, including the use of root motion and actions blocking or interrupting each other. Use the dash action to see these at play (jump will interrupt the dash after about half the slide).
+In the level there are two characters. One is the Simple Character (first person) and the other the Example Character (third person). The Simple Character  is the equivalent of using Godot's CharacterBody3D's Basic Movement template script. The Example Character uses a more complex set up to display a more common set of actions a character may have, including the use of root motion and actions blocking or interrupting each other. Use the dash action to see these at play (jump will interrupt the dash after about half the slide).
 
 In the level is also a purple cube that will add a "Dash" action to any character that walks into it.
 
