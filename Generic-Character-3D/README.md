@@ -1,6 +1,7 @@
 # Generic Character 3D
-This project is an example of 3D characters using the [Modular Character Controller](https://github.com/PantheraDigital/Modular-Character-Controller-for-Godot).
-**Modular Character Controller:** v2.0
+This project is an example of 3D characters using the [Modular Character Controller](https://github.com/PantheraDigital/Modular-Character-Controller-for-Godot). \
+**Modular Character Controller:** v2.0 \
+**Godot:** v4.4 - 4.6
 
 [video](https://www.youtube.com/watch?v=S7sfsYb2C7Q)
 
