@@ -5,6 +5,8 @@ This is an example of the [Modular Character Controller](https://github.com/Pant
 The project is largely the same and the original character is left for reference. Both the original and new players can be found in the "player" folder. The modular character is the one in the world scene. 
 <br/><br/>
 
+**Modular Character Controller:** v2.0
+
 **Original Project:** 
 
 [**Kinematic Character 2D**](https://godotengine.org/asset-library/asset/113)
