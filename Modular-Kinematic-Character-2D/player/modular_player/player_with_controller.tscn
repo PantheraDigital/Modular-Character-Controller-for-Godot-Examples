@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://uvmta6gvsp7m"]
+
+[ext_resource type="Script" uid="uid://12y4nns5pnqe" path="res://player/modular_player/player_with_controller.gd" id="1_8qerm"]
+[ext_resource type="Texture2D" uid="uid://dfb8rr2fakwgp" path="res://player/old_player/player.png" id="2_j2tss"]
+[ext_resource type="Script" uid="uid://cvhum0gbo0c8b" path="res://addons/modular_character_controller/scripts/action_player.gd" id="3_wofvu"]
+[ext_resource type="Script" uid="uid://cvulit1lfi6jh" path="res://player/modular_player/actions/action_move.gd" id="5_fyipv"]
+[ext_resource type="Script" uid="uid://clmlnuwjgkw3g" path="res://player/modular_player/actions/action_jump.gd" id="6_aisjr"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(14, 14)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8qerm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j2tss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.315559, 0.157784)
+shape = SubResource("1")
+
+[node name="ActionPlayer" type="Node" parent="."]
+script = ExtResource("3_wofvu")
+action_map = Dictionary[StringName, NodePath]({
+&"jump": NodePath("Jump"),
+&"move": NodePath("Move")
+})
+debug_log = true
+metadata/_custom_type_script = "uid://cvhum0gbo0c8b"
+
+[node name="Move" type="Node" parent="ActionPlayer"]
+script = ExtResource("5_fyipv")
+metadata/_custom_type_script = "uid://cly0emxejp1y1"
+
+[node name="Jump" type="Node" parent="ActionPlayer"]
+script = ExtResource("6_aisjr")
+metadata/_custom_type_script = "uid://cly0emxejp1y1"
