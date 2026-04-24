@@ -1,0 +1,48 @@
+Notes On State Machine
+
+Hierarchy:
+state (virtual)
+- die
+- attack
+- stagger
+- motion (virtual)
+- - jump
+- - on ground (virtual)
+- - - idle
+- - - move
+
+Transitions:
+idle    -> move
+		-> jump (on ground state)
+		-> stagger (motion state)
+		-> attack (state machine)
+
+move    -> idle
+		-> jump (on ground state)
+		-> stagger (motion state)
+		-> attack (state machine)
+
+jump    -> "previous"
+		-> stagger (motion state)
+		-> attack (state machine)
+
+stagger -> "previous"
+		-> attack (state machine)
+
+attack  -> "previous"
+
+die     -> "dead"
+
+
+Identified Actions:
+idle, walk, run, jump
+take damage, attack, die
+fire
+
+ActionNode Planning:
+move - idle, walk, run; (ground phys); {"direction":vector2, "run":bool}
+	 - (air phys); {"direction":vector2}
+jump - change move type
+attack - sword, bullet; {"type":"sword"/"bullet"}; block: move, jump
+take damage - {"attacker":Node2d, "amount":float, "effect":object}; block: move, jump
+die -
