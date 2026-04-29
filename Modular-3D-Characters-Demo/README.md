@@ -1,5 +1,5 @@
 # Generic Character 3D
-**Modular Character Controller:** v3.0 \
+**Modular Character Controller:** v3.0.1 \
 **Godot:** v4.4 - 4.6
 
 [Demo video](https://www.youtube.com/watch?v=S7sfsYb2C7Q)
