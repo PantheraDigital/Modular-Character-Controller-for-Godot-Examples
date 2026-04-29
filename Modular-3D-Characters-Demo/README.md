@@ -12,10 +12,10 @@ In the level is also a purple cube that will add a "Dash" action to any characte
 
 **Included:**
 - two example characters
-  - [simple](Modular-3D-Characters-Demo/scenes/SimpleCharacter.tscn) : This displays the Godot CharacterBody3D Basic Movement template adapted to this system.
-  - [animated](Modular-3D-Characters-Demo/scenes/AnimatedCharacter.tscn) : An animated character using more of the features this system provides (a closer representation of the average playable character).
-- [demo level](Modular-3D-Characters-Demo/scenes/Level.tscn) : A scene with both characters set up to allow the player to swap between them.
-- [action pickup](Modular-3D-Characters-Demo/scenes/DashPickup.tscn) : An example of an object adding an action to a character at runtime.
+  - [simple](scenes/SimpleCharacter.tscn) : This displays the Godot CharacterBody3D Basic Movement template adapted to this system.
+  - [animated](scenes/AnimatedCharacter.tscn) : An animated character using more of the features this system provides (a closer representation of the average playable character).
+- [demo level](scenes/Level.tscn) : A scene with both characters set up to allow the player to swap between them.
+- [action pickup](scenes/DashPickup.tscn) : An example of an object adding an action to a character at runtime.
 
 **Controls:** 
 - w,a,s,d: _move_ 
@@ -43,8 +43,8 @@ Actions:
 Physics:
  - ground based
 
-![](Modular-3D-Characters-Demo/screenshots/simple-character-scene-tree.png)
-![](Modular-3D-Characters-Demo/screenshots/simple-character-action-map-inspector.png)
+![](screenshots/simple-character-scene-tree.png)
+![](screenshots/simple-character-action-map-inspector.png)
 
 
 --Animated Character-- \
@@ -71,5 +71,5 @@ _FallToRoll_
 _Slide (from dash)_
  - look_only, look_only + jump, look_only + jump + move
 
-![](Modular-3D-Characters-Demo/screenshots/animated-character-scene-tree.png)
-![](Modular-3D-Characters-Demo/screenshots/animated-character-action-map-inspector.png)
+![](screenshots/animated-character-scene-tree.png)
+![](screenshots/animated-character-action-map-inspector.png)
