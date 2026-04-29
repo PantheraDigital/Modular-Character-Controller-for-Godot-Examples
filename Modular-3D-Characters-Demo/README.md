@@ -29,8 +29,10 @@ Third person character specific controls:
 - double tap space: _toggle flying_ 
 - q/e (while flying): _fly up/fly down_
 
-**Character Behavior:**
---Simple Character--
+**Character Behavior:** \
+_See scripts for more details._ 
+
+--Simple Character-- \
 Actions:
  - move
  - jump
@@ -42,7 +44,7 @@ Physics:
  - ground based 
 
 
---Animated Character--
+--Animated Character-- \
 Actions:
  - move (ground/flying)
  - jump
@@ -56,13 +58,13 @@ Physics:
  - ground 
  - flying
 
-Anims Change Action Map:
-FallToLand
+Anims Change Action Map: \
+_FallToLand_
  - look_only, grounded
-FallToRoll
+
+_FallToRoll_
  - look_only, grounded
-Slide (from dash)
+
+_Slide (from dash)_
  - look_only, look_only + jump, look_only + jump + move
 
-
-_See scripts for more details._
